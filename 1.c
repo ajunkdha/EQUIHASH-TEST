@@ -336,7 +336,7 @@ void haraka512_perm(unsigned char *out, const unsigned char *in)
     memcpy(out, s, 64);
 }
 
-void haraka512_perm_keyed(unsigned char *out, const unsigned char *in, const u128 *rc) 
+void haraka512_perm_keyed(unsigned char *out, const unsigned char *in, const __m128i *rc) 
 {
     int i, j;
 
@@ -389,7 +389,7 @@ void haraka512_port(unsigned char *out, const unsigned char *in)
     memcpy(out + 24, buf + 48, 8);
 }
 
-void haraka512_port_keyed(unsigned char *out, const unsigned char *in, const u128 *rc)
+void haraka512_port_keyed(unsigned char *out, const unsigned char *in, const __m128i *rc)
 {
     int i;
 
